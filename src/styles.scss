@@ -122,31 +122,31 @@ nav.navbar {
 
 .network-rococo {
   .hero.welcome.is-info {
-    background: linear-gradient(to right, #6f36dc, #6f36dc);
+    background: linear-gradient(to right, #3498db, #3498db);
   }
 
   .button.is-primary {
-    background-color: #6f36dc;
+    background-color: #3498db;
   }
 
   .button.is-primary:hover {
-    background-color: #6f36dc;
+    background-color: #3498db;
   }
 
   .card-header-icon {
-    color: #6f36dc;
+    color: #3498db;
   }
   .navbar {
-    background: #6f36dc;
+    background: #3498db;
   }
 
   .tabs li.is-active a {
-    color: #6f36dc;
-    border-bottom-color: #6f36dc;
+    color: #3498db;
+    border-bottom-color: #3498db;
   }
 
   a {
-    color: #6f36dc;
+    color: #3498db;
   }
 
   .navbar-item a, a.navbar-item {
@@ -699,7 +699,7 @@ nav.navbar {
 }
 
 nav.navbar.networks {
-  background: #000;
+  background: #fff;
   margin-bottom: 0;
 }
 

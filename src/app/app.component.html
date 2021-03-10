@@ -26,7 +26,7 @@
               </a>
               <div class="is-hidden-desktop network-name">
                 <i *ngIf="currentNetwork?.attributes.chain_type == 'para'" class="fa fa-project-diagram network-icon current-network"  [style.color]="'#' + currentNetwork?.attributes.color_code" title="Parachain"></i>
-                <i *ngIf="currentNetwork?.attributes.chain_type == 'relay'" class="fa fa-globe network-icon current-network" [style.color]="'#' + currentNetwork?.attributes.color_code" title="Relay chain"></i>
+                <i *ngIf="currentNetwork?.attributes.chain_type == 'relay'" class="fa fa-globe network-icon current-network" [style.color]="'#3498db'" title="Relay chain"></i>
                 {{ currentNetwork?.attributes.name || 'Network'  }}
               </div>
               <div class="navbar-burger burger" data-target="navMenu-networks" [ngClass]="{'is-active': showNavigation}" (click)="toggleNavigation()">
@@ -40,13 +40,13 @@
                 <div class="navbar-item has-dropdown" [ngClass]="{'is-hoverable': showSubmenus}">
                   <a class="navbar-link is-hidden-touch">
                     <i *ngIf="currentNetwork?.attributes.chain_type == 'para'" class="fa fa-project-diagram network-icon current-network"  [style.color]="'#' + currentNetwork?.attributes.color_code" title="Parachain"></i>
-                    <i *ngIf="currentNetwork?.attributes.chain_type == 'relay'" class="fa fa-globe network-icon current-network" [style.color]="'#' + currentNetwork?.attributes.color_code" title="Relay chain"></i>
+                    <i *ngIf="currentNetwork?.attributes.chain_type == 'relay'" class="fa fa-globe network-icon current-network" [style.color]="'#3498db'" title="Relay chain"></i>
                     {{ currentNetwork?.attributes.name || 'Global.Network' | translate }}
                   </a>
                   <div *ngIf="networks?.data.length > 0" class="navbar-dropdown" (click)="toggleSubmenus()">
                     <a *ngFor="let network of networks.data; trackBy: networks.trackBy" class="navbar-item" (click)="switchNetwork(network)" [routerLink]="'/' + network.attributes.network_id">
                       <i *ngIf="network.attributes.chain_type == 'para'" class="fa fa-project-diagram network-icon"  [style.color]="'#' + network.attributes.color_code" title="Parachain"></i>
-                      <i *ngIf="network.attributes.chain_type == 'relay'" class="fa fa-globe network-icon" [style.color]="'#' + network.attributes.color_code" title="Relay chain"></i>
+                      <i *ngIf="network.attributes.chain_type == 'relay'" class="fa fa-globe network-icon" [style.color]="'#3498db'" title="Relay chain"></i>
                       {{ network.attributes.name }}
                     </a>
                   </div>

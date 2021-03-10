@@ -15,29 +15,29 @@
 
 .explore-rococo {
   .button.is-primary {
-    background-color: #6f36dc;
+    background-color: #3498db;
   }
 
   .network-icon {
-    color: #6f36dc;
+    color: #3498db;
   }
 
   .button.is-primary:hover {
-    background-color: #6f36dc;
+    background-color: #3498db;
   }
 }
 
 .explore-datahighway {
   .button.is-primary {
-    background-color: #6c33de;
+    background-color: #3498db;
   }
 
   .network-icon {
-    color: #6c33de;
+    color: #3498db;
   }
 
   .button.is-primary:hover {
-    background-color: #6c33de;
+    background-color: #3498db;
   }
 }
 
@@ -257,4 +257,12 @@
 
 .card-image {
   padding: 0 50px;
+}
+
+#navMenu {
+  .navbar-start{
+    a {
+      color:#fff;
+    }
+  }
 }
