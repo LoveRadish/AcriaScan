@@ -13,8 +13,8 @@
                 </header>
                 <div class="card-content">
                     <div class="content">
-                        <form (ngSubmit)="search()">
-                        <div class="control has-icons-left has-icons-right">
+                        <form (ngSubmit)="search()" style="display:flex;">
+                        <div class="control has-icons-left has-icons-right" style="width:100%;">
                             <input class="input is-large is-loading" type="text" [(ngModel)]="searchQuery" [ngModelOptions]="{standalone: true}" [placeholder]="'PlaceHolderSearch' | translate">
                             <span class="icon is-medium is-left">
                               <i *ngIf="loadingCount === 0" class="fa fa-search"></i>
@@ -24,6 +24,9 @@
 
                             </span>
                         </div>
+                        <button (click)="search()" type="submit" class="button is-primary icon is-medium is-right" style="height:3.4rem; width:3.4rem;">
+                          <i class="fa fa-search"></i>
+                        </button>
                       </form>
                     </div>
                 </div>

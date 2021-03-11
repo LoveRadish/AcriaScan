@@ -29,15 +29,15 @@
 
 .explore-datahighway {
   .button.is-primary {
-    background-color: #3498db;
+    background-color: #6c33de;
   }
 
   .network-icon {
-    color: #3498db;
+    color: #6c33de;
   }
 
   .button.is-primary:hover {
-    background-color: #3498db;
+    background-color: #6c33de;
   }
 }
 
@@ -57,29 +57,29 @@
 
 .explore-kusama {
   .button.is-primary {
-    background-color: #000000;
+    background-color: #3498db;
   }
 
   .network-icon {
-    color: #000000;
+    color: #3498db;
   }
 
   .button.is-primary:hover {
-    background-color: #000000;
+    background-color: #3498db;
   }
 }
 
 .explore-polkadot {
   .button.is-primary {
-    background-color: #e6007a;
+    background-color: #3498db;
   }
 
   .network-icon {
-    color: #e6007a;
+    color: #3498db;
   }
 
   .button.is-primary:hover {
-    background-color: #e6007a;
+    background-color: #3498db;
   }
 }
 
@@ -258,11 +258,6 @@
 .card-image {
   padding: 0 50px;
 }
-
-#navMenu {
-  .navbar-start{
-    a {
-      color:#fff;
-    }
-  }
+.navbar-dropdown a:hover{
+  color: #3498db!important;
 }

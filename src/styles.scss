@@ -137,7 +137,7 @@ nav.navbar {
     color: #3498db;
   }
   .navbar {
-    background: #3498db;
+    background: #21325B;
   }
 
   .tabs li.is-active a {
@@ -151,6 +151,9 @@ nav.navbar {
 
   .navbar-item a, a.navbar-item {
     color: #4a4a4a;
+  }
+  .navbar-dropdown a:hover{
+    color: #3498db!important;
   }
 }
 
@@ -394,69 +397,75 @@ nav.navbar {
 
 .network-kusama {
   .hero.welcome.is-info {
-    background: linear-gradient(to right, #000000, #000000);
+    background: linear-gradient(to right, #3498db, #3498db);
   }
 
   .button.is-primary {
-    background-color: #000000;
+    background-color: #3498db;
   }
 
   .button.is-primary:hover {
-    background-color: #000000;
+    background-color: #3498db;
   }
 
   .card-header-icon {
-    color: #000000;
+    color: #3498db;
   }
   .navbar {
-    background: #000000;
+    background: #21325B;
   }
 
   .tabs li.is-active a {
-    color: #000000;
-    border-bottom-color: #000000;
+    color: #3498db;
+    border-bottom-color: #3498db;
   }
 
   a {
-    color: #000000;
+    color: #3498db;
   }
 
   .navbar-item a, a.navbar-item {
     color: #4a4a4a;
+  }
+  .navbar-dropdown a:hover{
+    color: #3498db!important;
   }
 }
 
 .network-polkadot {
   .hero.welcome.is-info {
-    background: linear-gradient(to right, #e6007a, #e6007a);
+    background: linear-gradient(to right, #3498db, #3498db);
   }
 
   .button.is-primary {
-    background-color: #e6007a;
+    background-color: #3498db;
   }
 
   .button.is-primary:hover {
-    background-color: #e6007a;
+    background-color: #3498db;
   }
 
   .card-header-icon {
-    color: #e6007a;
+    color: #3498db;
   }
   .navbar {
-    background: #e6007a;
+    background: #21325B;
   }
 
   .tabs li.is-active a {
-    color: #e6007a;
-    border-bottom-color: #e6007a;
+    color: #3498db;
+    border-bottom-color: #3498db;
   }
 
   a {
-    color: #e6007a;
+    color: #3498db;
   }
 
   .navbar-item a, a.navbar-item {
     color: #4a4a4a;
+  }
+  .navbar-dropdown a:hover{
+    color: #3498db!important;
   }
 }
 
@@ -673,33 +682,38 @@ nav.navbar {
 }
 
 .button.is-primary {
-  background-color: #999;
+  background-color: #3498db;
+  color: #fff!important;
 }
 
 .button.is-primary:hover {
-  background-color: #777;
+  background-color: #3498db;
 }
 
 .card-header-icon {
-  color: #999;
+  color: #3498db;
 }
 
 nav.navbar {
-  background: #999;
+  background: #21325B;
   border-top: 0px;
 }
 
 .tabs li.is-active a {
-  color: #999;
-  border-bottom-color: #999;
+  color: #3498db;
+  border-bottom-color: #3498db;
 }
 
 .tabs a {
-  color: #4a4a4a;
+  color: #3498db;
+}
+
+.navbar.is-black {
+  background: #21325B!important;
 }
 
 nav.navbar.networks {
-  background: #fff;
+  background: #000!important;
   margin-bottom: 0;
 }
 
@@ -734,7 +748,15 @@ nav.navbar.networks {
     max-width: 130px;
   }
 }
-
+.navbar-dropdown a:hover{
+  color: #3498db!important;
+}
+.input {
+  font-family: inherit;
+}
+.icon {
+  color: #3498db!important;
+}
 .hash-format {
   overflow: hidden;
   text-overflow: ellipsis;

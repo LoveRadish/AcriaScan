@@ -13,16 +13,13 @@
             <div class="card">
                 <div class="card-content">
                     <div class="content">
-                        <form (ngSubmit)="search()">
-                        <div class="control has-icons-left has-icons-right">
+                        <form (ngSubmit)="search()" style="display:flex;">
+                        <!-- <div class="control has-icons-right"> -->
                             <input class="input is-large" type="text" [(ngModel)]="blockSearchText" [ngModelOptions]="{standalone: true}" [placeholder]="'PlaceHolderSearch' | translate">
-                            <span class="icon is-medium is-left">
-                              <i class="fa fa-search"></i>
-                            </span>
-                            <span class="icon is-medium is-right">
-                              <i *ngIf="blockSearchText" class="fa fa-check"></i>
-                            </span>
-                        </div>
+                        <!-- </div> -->
+                        <button (click)="search()" type="submit" class="button is-primary icon is-medium is-right" style="height:3.4rem; width:3.4rem;">
+                          <i class="fa fa-search"></i>
+                        </button>
                       </form>
                     </div>
                 </div>
@@ -32,17 +29,17 @@
         <section class="info-tiles is-hidden-mobile">
             <div class="tile is-ancestor has-text-centered">
                 <div class="tile is-parent is-2-mobile">
-                    <article class="tile is-child box">
-                      <a routerLink="{{ networkURLPrefix }}/block/">
-                        <div>
+                  <article class="tile is-child box">
+                    <a routerLink="{{ networkURLPrefix }}/block/">
+                      <div>
                         <span class="icon">
                             <i class="fa fa-cube fa-2x"></i>
                         </span>
                         <p class="title" *ngIf="networkstats$ | async as networkstats">{{ networkstats.attributes.best_block| number: '1.'}}</p>
                         <p class="subtitle">{{ 'DashBoard.Finalized Block' | translate }}</p>
-                          </div>
-                      </a>
-                    </article>
+                      </div>
+                    </a>
+                  </article>
                 </div>
                 <div class="tile is-parent is-2-mobile">
                     <article class="tile is-child box">
