@@ -1,7 +1,9 @@
 html, body {
   font-family: Helvetica,Arial,sans-serif;
-  font-size: 16px;
+  font-size: .875rem;
+  font-weight: 400;
   line-height: 1.5;
+  text-align: left;
   height: 100%;
   background: #ECF0F3;
 }
@@ -44,9 +46,10 @@ nav.navbar {
   margin-bottom: 2rem;
 }
 .card-header-title {
-  color: #8F99A3;
+  color: #4a4f55;
   font-weight: 400;
   font-size: 1.2em;
+  font-weight: 600;
 }
 .info-tiles {
   margin: 1rem 0;
@@ -709,11 +712,11 @@ nav.navbar {
 }
 
 .navbar.is-black {
-  background: #21325B!important;
+  background: #3498db!important;
 }
 
 nav.navbar.networks {
-  background: #000!important;
+  background: #fff!important;
   margin-bottom: 0;
 }
 
@@ -756,6 +759,57 @@ nav.navbar.networks {
 }
 .icon {
   color: #3498db!important;
+}
+#navMenu-networks a {
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: rgb(108, 117, 126);
+}
+#navMenu-networks a:hover{
+  background-color:white;
+  color:#3498db;
+}
+.navbar-brand a:hover{
+  background-color:white!important;
+}
+.navbar.is-black .navbar-item.has-dropdown:hover .navbar-link
+{
+  background-color:#fff;color:#fff
+}
+
+#navMenu_top a{
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: rgb(108, 117, 126);
+}
+.navbar > .container {
+  align-items: stretch;
+  display: flex;
+  min-height: 4.25rem;
+  width: 100%;
+}
+#search_box_content {
+  min-height:20rem;
+  width: 100%;
+  background-color: #21325b !important;
+  background-image: url(/assets/abstract-shapes-20.svg?v=1)!important;
+  z-index: 1;
+  position:absolute;
+}
+#search {
+  padding-top: 4.25rem !important;
+  width: 50%;
+}
+#search input::placeholder {
+  font-weight: 400;
+  color: rgb(108, 117, 126);
+  opacity: 1; /* Firefox */
 }
 .hash-format {
   overflow: hidden;

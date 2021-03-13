@@ -35,7 +35,115 @@
                   </span>
               </div>
           </div>
+          
+          
+          
           <div id="navMenu-networks" class="navbar-menu" [ngClass]="{'is-active': showNavigation}">
+            <div id="navMenu_top" *ngIf="currentNetwork"  class="navbar-menu" [ngClass]="{'is-active': showNavigation}">
+              <div class="navbar-end">
+                  <a class="navbar-item" routerLink="/{{ networkId }}">
+                    {{ 'NavBar.Dashboard' | translate }}
+                  </a>
+                  <div class="navbar-item has-dropdown" [ngClass]="{'is-hoverable': showSubmenus}">
+                    <a class="navbar-link">
+                      {{ 'NavBar.Chain' | translate }}
+                    </a>
+                    <div class="navbar-dropdown" (click)="toggleSubmenus()">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/block">
+                        {{ 'NavBar.item_Blocks' | translate }}
+                      </a>
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/transaction">
+                        {{ 'NavBar.item_Transactions' | translate }}
+                      </a>
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/inherent">
+                        {{ 'NavBar.item_Inherents' | translate }}
+                      </a>
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/event">
+                        {{ 'NavBar.item_Events' | translate }}
+                      </a>
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/log">
+                        {{ 'NavBar.item_Logs' | translate }}
+                      </a>
+                    </div>
+                  </div>
+  
+                  <div class="navbar-item has-dropdown" [ngClass]="{'is-hoverable': showSubmenus}">
+                    <a class="navbar-link">
+                      {{ 'NavBar.Accounts' | translate }}
+                    </a>
+                    <div class="navbar-dropdown" (click)="toggleSubmenus()">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/account">
+                        {{ 'NavBar.item_Accounts' | translate }}
+                      </a>
+                      <hr class="navbar-divider">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/account/validators">
+                        {{ 'NavBar.item_Validator Accounts' | translate }}
+                      </a>
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/account/nominators">
+                        {{ 'NavBar.item_Nominator Accounts' | translate }}
+                      </a>
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/account/council">
+                        {{ 'NavBar.item_Council Accounts' | translate }}
+                      </a>
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/account/tech-comm">
+                        {{ 'NavBar.item_Techcomm Accounts' | translate }}
+                      </a>
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/account/registrars">
+                        {{ 'NavBar.item_Registrar Accounts' | translate }}
+                      </a>
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/account/treasury">
+                        {{ 'NavBar.item_Treasury Accounts' | translate }}
+                      </a>
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/account/sudo">
+                        {{ 'NavBar.item_Sudo Accounts' | translate }}
+                      </a>
+                      <hr class="navbar-divider">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/account/identities">
+                        {{ 'NavBar.item_Identities' | translate }}
+                      </a>
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/indices/account">
+                        {{ 'NavBar.item_Indices' | translate }}
+                      </a>
+                      <hr class="navbar-divider">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/balances/transfer">
+                        {{ 'NavBar.item_Transfers' | translate }}
+                      </a>
+                    </div>
+                  </div>
+  
+                  <div *ngIf="!singleNetworkVersion" class="navbar-item has-dropdown" [ngClass]="{'is-hoverable': showSubmenus}">
+                    <a class="navbar-link">
+                      {{ 'NavBar.Analytics' | translate }}
+                    </a>
+                    <div class="navbar-dropdown" (click)="toggleSubmenus()">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/analytics/search">
+                        {{ 'NavBar.item_Search' | translate }}
+                      </a>
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/analytics/charts">
+                        {{ 'NavBar.item_Charts' | translate }}
+                      </a>
+                    </div>
+                  </div>
+  
+                  <div class="navbar-item has-dropdown" [ngClass]="{'is-hoverable': showSubmenus}">
+                    <a class="navbar-link">
+                      {{ 'NavBar.Runtime' | translate }}
+                    </a>
+                    <div class="navbar-dropdown" (click)="toggleSubmenus()">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/runtime-module">
+                        {{ 'NavBar.item_Modules' | translate }}
+                      </a>
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/runtime-type">
+                        {{ 'NavBar.item_Types' | translate }}
+                      </a>
+                      <hr class="navbar-divider">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/runtime">
+                        {{ 'NavBar.item_Upgrade_history' | translate }}
+                      </a>
+                    </div>
+                  </div>
+              </div>
+          </div>
             <div class="navbar-end">
                 <div class="navbar-item has-dropdown" [ngClass]="{'is-hoverable': showSubmenus}">
                   <a class="navbar-link is-hidden-touch">
