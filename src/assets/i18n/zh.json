@@ -297,7 +297,7 @@
 		"Status": "状态",
 		"Updated at block": "在区块更新",
 		"Verified URL": "已审核的网址",
-		"Verified by Polkascan": "经Polkascan审核"
+		"Verified by Polkascan": "经AcriaScan审核"
 	},
 	"Democracy-preimage-list": {
 		"Created at Block": "在区块创建",
@@ -387,7 +387,7 @@
 	"Global": {
 		"DisclaimerButton": "知道了",
 		"DisclaimerTextAnd": "和",
-		"DisclaimerTextPre": "WEB3SCAN了解保护和维护您隐私的重要性。继续使用本网站即表示您同意我们的",
+		"DisclaimerTextPre": "AcriaScan了解保护和维护您隐私的重要性。继续使用本网站即表示您同意我们的",
 		"DisclaimerTextPrivacyPolicy": "隐私政策",
 		"DisclaimerTextTermsOfUse": "使用条款",
 		"Network": "网络",
@@ -450,7 +450,7 @@
 	},
 	"Network-overview": {
 		"Explore": "探索",
-		"IntroductionText": "POLKASCAN是WEB3SCAN的一部分，并提供实时多链数据。 WEB3SCAN使区块链数据可访问并可理解",
+		"IntroductionText": "AcriaScan是AcriaScan的一部分，并提供实时多链数据。 AcriaScan使区块链数据可访问并可理解",
 		"Name": "名称",
 		"Networks": "网络"
 	},
@@ -651,7 +651,7 @@
 		"Value type": "值类型"
 	},
 	"runtime-type-list": {
-		"Compatible with Polkascan": "与Polkascan兼容",
+		"Compatible with Polkascan": "与AcriaScan兼容",
 		"RUST primitive": "RUST原始类",
 		"Runtime Types": "运行时原始类",
 		"Runtime primitive": "运行时ID",

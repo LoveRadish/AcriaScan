@@ -651,7 +651,7 @@
 		"Value type": "Tipo di valore"
 	},
 	"runtime-type-list": {
-		"Compatible with Polkascan": "Compatibile con Polkascan",
+		"Compatible with Polkascan": "Compatibile con AcriaScan",
 		"RUST primitive": "",
 		"Runtime Types": "Tipi di runtime",
 		"Runtime primitive": "",

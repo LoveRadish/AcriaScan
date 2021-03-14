@@ -297,7 +297,7 @@
 		"Status": "Статус",
 		"Updated at block": "Оновлено в блоці",
 		"Verified URL": "Перевірений URL",
-		"Verified by Polkascan": "Перевірений Polkascan"
+		"Verified by Polkascan": "Перевірений AcriaScan"
 	},
 	"Democracy-preimage-list": {
 		"Created at Block": "Створено в блоці",
@@ -387,7 +387,7 @@
 	"Global": {
 		"DisclaimerButton": "Я розумію",
 		"DisclaimerTextAnd": "і",
-		"DisclaimerTextPre": "WEB3SCAN розуміє важливість захисту та захисту вашої конфіденційності. Продовжуючи користуватися цим сайтом, Ви погоджуєтеся з нашими умовами.",
+		"DisclaimerTextPre": "AcriaScan розуміє важливість захисту та захисту вашої конфіденційності. Продовжуючи користуватися цим сайтом, Ви погоджуєтеся з нашими умовами.",
 		"DisclaimerTextPrivacyPolicy": "Політика конфіденційності",
 		"DisclaimerTextTermsOfUse": "Умови використання",
 		"Network": "Мережа",
@@ -651,7 +651,7 @@
 		"Value type": "Тип значення"
 	},
 	"runtime-type-list": {
-		"Compatible with Polkascan": "Сумісний з Polkascan",
+		"Compatible with Polkascan": "Сумісний з AcriaScan",
 		"RUST primitive": "Примітив RUST",
 		"Runtime Types": "Типи середовища виконання",
 		"Runtime primitive": "Примітиви середовища виконання",

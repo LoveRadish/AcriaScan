@@ -41,7 +41,7 @@
           <div id="navMenu-networks" class="navbar-menu" [ngClass]="{'is-active': showNavigation}">
             <div id="navMenu_top" *ngIf="currentNetwork"  class="navbar-menu" [ngClass]="{'is-active': showNavigation}">
               <div class="navbar-end">
-                  <a class="navbar-item" routerLink="/{{ networkId }}">
+                  <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}">
                     {{ 'NavBar.Dashboard' | translate }}
                   </a>
                   <div class="navbar-item has-dropdown" [ngClass]="{'is-hoverable': showSubmenus}">
@@ -49,19 +49,19 @@
                       {{ 'NavBar.Chain' | translate }}
                     </a>
                     <div class="navbar-dropdown" (click)="toggleSubmenus()">
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/block">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/block">
                         {{ 'NavBar.item_Blocks' | translate }}
                       </a>
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/transaction">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/transaction">
                         {{ 'NavBar.item_Transactions' | translate }}
                       </a>
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/inherent">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/inherent">
                         {{ 'NavBar.item_Inherents' | translate }}
                       </a>
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/event">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/event">
                         {{ 'NavBar.item_Events' | translate }}
                       </a>
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/log">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/log">
                         {{ 'NavBar.item_Logs' | translate }}
                       </a>
                     </div>
@@ -72,40 +72,40 @@
                       {{ 'NavBar.Accounts' | translate }}
                     </a>
                     <div class="navbar-dropdown" (click)="toggleSubmenus()">
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/account">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/account">
                         {{ 'NavBar.item_Accounts' | translate }}
                       </a>
                       <hr class="navbar-divider">
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/account/validators">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/account/validators">
                         {{ 'NavBar.item_Validator Accounts' | translate }}
                       </a>
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/account/nominators">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/account/nominators">
                         {{ 'NavBar.item_Nominator Accounts' | translate }}
                       </a>
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/account/council">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/account/council">
                         {{ 'NavBar.item_Council Accounts' | translate }}
                       </a>
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/account/tech-comm">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/account/tech-comm">
                         {{ 'NavBar.item_Techcomm Accounts' | translate }}
                       </a>
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/account/registrars">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/account/registrars">
                         {{ 'NavBar.item_Registrar Accounts' | translate }}
                       </a>
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/account/treasury">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/account/treasury">
                         {{ 'NavBar.item_Treasury Accounts' | translate }}
                       </a>
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/account/sudo">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/account/sudo">
                         {{ 'NavBar.item_Sudo Accounts' | translate }}
                       </a>
                       <hr class="navbar-divider">
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/account/identities">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/account/identities">
                         {{ 'NavBar.item_Identities' | translate }}
                       </a>
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/indices/account">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/indices/account">
                         {{ 'NavBar.item_Indices' | translate }}
                       </a>
                       <hr class="navbar-divider">
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/balances/transfer">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/balances/transfer">
                         {{ 'NavBar.item_Transfers' | translate }}
                       </a>
                     </div>
@@ -116,10 +116,10 @@
                       {{ 'NavBar.Analytics' | translate }}
                     </a>
                     <div class="navbar-dropdown" (click)="toggleSubmenus()">
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/analytics/search">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/analytics/search">
                         {{ 'NavBar.item_Search' | translate }}
                       </a>
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/analytics/charts">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/analytics/charts">
                         {{ 'NavBar.item_Charts' | translate }}
                       </a>
                     </div>
@@ -130,14 +130,14 @@
                       {{ 'NavBar.Runtime' | translate }}
                     </a>
                     <div class="navbar-dropdown" (click)="toggleSubmenus()">
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/runtime-module">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/runtime-module">
                         {{ 'NavBar.item_Modules' | translate }}
                       </a>
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/runtime-type">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/runtime-type">
                         {{ 'NavBar.item_Types' | translate }}
                       </a>
                       <hr class="navbar-divider">
-                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.name || 'Network'  }}/{{ networkId }}/runtime">
+                      <a class="navbar-item" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}/runtime">
                         {{ 'NavBar.item_Upgrade_history' | translate }}
                       </a>
                     </div>

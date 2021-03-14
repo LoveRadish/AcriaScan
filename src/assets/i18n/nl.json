@@ -297,7 +297,7 @@
 		"Status": "staat",
 		"Updated at block": "Bijgewerkt bij blok",
 		"Verified URL": "Geverifieerde URL",
-		"Verified by Polkascan": "Geverifieerd door Polkascan"
+		"Verified by Polkascan": "Geverifieerd door AcriaScan"
 	},
 	"Democracy-preimage-list": {
 		"Created at Block": "Gemaakt bij blok",
@@ -387,7 +387,7 @@
 	"Global": {
 		"DisclaimerButton": "Ik begrijp het",
 		"DisclaimerTextAnd": "en",
-		"DisclaimerTextPre": "WEB3SCAN begrijpt het belang van het beschermen en beschermen van uw privacy. Door deze website te blijven gebruiken, gaat u akkoord met onze",
+		"DisclaimerTextPre": "AcriaScan begrijpt het belang van het beschermen en beschermen van uw privacy. Door deze website te blijven gebruiken, gaat u akkoord met onze",
 		"DisclaimerTextPrivacyPolicy": "Privacybeleid",
 		"DisclaimerTextTermsOfUse": "Gebruiksvoorwaarden",
 		"Network": "Netwerk",
@@ -450,7 +450,7 @@
 	},
 	"Network-overview": {
 		"Explore": "onderzoeken",
-		"IntroductionText": "POLKASCAN is onderdeel van WEB3SCAN en biedt real-time gegevens met meerdere ketens. WEB3SCAN maakt blockchain-gegevens toegankelijk en begrijpelijk.",
+		"IntroductionText": "AcriaScan is onderdeel van AcriaScan en biedt real-time gegevens met meerdere ketens. AcriaScan maakt blockchain-gegevens toegankelijk en begrijpelijk.",
 		"Name": "Naam",
 		"Networks": "Netwerken"
 	},
@@ -651,7 +651,7 @@
 		"Value type": "Waarde type"
 	},
 	"runtime-type-list": {
-		"Compatible with Polkascan": "Compatibel met Polkascan",
+		"Compatible with Polkascan": "Compatibel met AcriaScan",
 		"RUST primitive": "ROEST primitief",
 		"Runtime Types": "Looptypes",
 		"Runtime primitive": "Runtime primitief",

@@ -297,7 +297,7 @@
 		"Status": "Durum",
 		"Updated at block": "Blokta güncellendi",
 		"Verified URL": "Doğrulanmış URL",
-		"Verified by Polkascan": "Polkascan tarafından doğrulandı"
+		"Verified by Polkascan": "AcriaScan tarafından doğrulandı"
 	},
 	"Democracy-preimage-list": {
 		"Created at Block": "Blokta oluşturuldu",
@@ -450,7 +450,7 @@
 	},
 	"Network-overview": {
 		"Explore": "Keşfet",
-		"IntroductionText": "POLKASCAN, WEB3SCAN'ın bir parçasıdır ve gerçek zamanlı çok zincirli veriler sunar. WEB3SCAN, blokzincir verilerine erişir ve anlaşılabilir hale getirir.",
+		"IntroductionText": "AcriaScan'ın bir parçasıdır ve gerçek zamanlı çok zincirli veriler sunar. WEB3SCAN, blokzincir verilerine erişir ve anlaşılabilir hale getirir.",
 		"Name": "İsim",
 		"Networks": "Ağlar"
 	},
@@ -651,7 +651,7 @@
 		"Value type": "Değer türü"
 	},
 	"runtime-type-list": {
-		"Compatible with Polkascan": "Polkascan ile uyumlu",
+		"Compatible with Polkascan": "AcriaScan ile uyumlu",
 		"RUST primitive": "RUST birincil",
 		"Runtime Types": "Runtime Türleri",
 		"Runtime primitive": "Runtime birincil",

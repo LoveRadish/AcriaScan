@@ -297,7 +297,7 @@
 		"Status": "Status",
 		"Updated at block": "Mise à jour au bloc",
 		"Verified URL": "URL vérifié",
-		"Verified by Polkascan": "Vérifié par Polkascan"
+		"Verified by Polkascan": "Vérifié par AcriaScan"
 	},
 	"Democracy-preimage-list": {
 		"Created at Block": "Créé au bloc",
@@ -387,7 +387,7 @@
 	"Global": {
 		"DisclaimerButton": "J'approuve",
 		"DisclaimerTextAnd": "et",
-		"DisclaimerTextPre": "WEB3SCAN comprends l'importance de la protection de votre vie privée. En continuant d'utiliser notre site web, vous acceptez notre",
+		"DisclaimerTextPre": "AcriaScan comprends l'importance de la protection de votre vie privée. En continuant d'utiliser notre site web, vous acceptez notre",
 		"DisclaimerTextPrivacyPolicy": "Politique de Confidentialité",
 		"DisclaimerTextTermsOfUse": "Conditions d'utilisation",
 		"Network": "Réseau",
@@ -450,7 +450,7 @@
 	},
 	"Network-overview": {
 		"Explore": "Explorer",
-		"IntroductionText": "POLKASCAN fait partie de WEB3SCAN et offre des données multichaînes en temps réel. WEB3SCAN rend les données de la blockchain accessibles et compréhensibles pour tous.",
+		"IntroductionText": "AcriaScan fait partie de AcriaScan et offre des données multichaînes en temps réel. AcriaScan rend les données de la blockchain accessibles et compréhensibles pour tous.",
 		"Name": "Nom",
 		"Networks": "Réseau"
 	},
@@ -651,7 +651,7 @@
 		"Value type": "Type de valeur"
 	},
 	"runtime-type-list": {
-		"Compatible with Polkascan": "Compatible avec Polkascan",
+		"Compatible with Polkascan": "Compatible avec AcriaScan",
 		"RUST primitive": "Primitive RUST",
 		"Runtime Types": "Types d'exécution",
 		"Runtime primitive": "Primivite d'exécution",

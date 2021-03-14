@@ -387,7 +387,7 @@
 	"Global": {
 		"DisclaimerButton": "मै समझता हुँ",
 		"DisclaimerTextAnd": "और",
-		"DisclaimerTextPre": "WEB3SCAN आपकी गोपनीयता की सुरक्षा और सुरक्षा के महत्व को समझता है। इस वेबसाइट का उपयोग जारी रखकर आप हमारे साथ सहमत हैं",
+		"DisclaimerTextPre": "AcriaScan आपकी गोपनीयता की सुरक्षा और सुरक्षा के महत्व को समझता है। इस वेबसाइट का उपयोग जारी रखकर आप हमारे साथ सहमत हैं",
 		"DisclaimerTextPrivacyPolicy": "गोपनीयता नीति",
 		"DisclaimerTextTermsOfUse": "उपयोग की शर्तें",
 		"Network": "नेटवर्क",
@@ -450,7 +450,7 @@
 	},
 	"Network-overview": {
 		"Explore": "अन्वेष",
-		"IntroductionText": "POLKASCAN WEB3SCAN का हिस्सा है और रियल-टाइम मल्टी-चेन डेटा प्रदान करता है। WEB3SCAN ब्लॉकचेन डेटा को सुलभ और समझने योग्य बनाता है।",
+		"IntroductionText": "AcriaScan का हिस्सा है और रियल-टाइम मल्टी-चेन डेटा प्रदान करता है। AcriaScan ब्लॉकचेन डेटा को सुलभ और समझने योग्य बनाता है।",
 		"Name": "नाम",
 		"Networks": "नेटवर्क्स"
 	},

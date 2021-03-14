@@ -297,7 +297,7 @@
 		"Status": "상황",
 		"Updated at block": "블록에서 업데이트됨",
 		"Verified URL": "검증된 URL",
-		"Verified by Polkascan": "Polkascan이 검증함"
+		"Verified by Polkascan": "AcriaScan 검증함"
 	},
 	"Democracy-preimage-list": {
 		"Created at Block": "블록에서 생성됨",
@@ -651,7 +651,7 @@
 		"Value type": "값 형식"
 	},
 	"runtime-type-list": {
-		"Compatible with Polkascan": "Polkascan과 호환",
+		"Compatible with Polkascan": "AcriaScan 호환",
 		"RUST primitive": "RUST 프리미티브",
 		"Runtime Types": "런타임 형식",
 		"Runtime primitive": "런타임 프리미티브",
