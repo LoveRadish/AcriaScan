@@ -827,10 +827,40 @@ nav.navbar.networks {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-.columns {
-  max-width: 1344px;
-  margin:0 auto;
+@media (min-width:1024px){
+  .columns {
+    max-width: 960px;
+    margin:0 auto;
+  }
+  app-block-detail,app-balances-transfer-detail {
+    max-width: 960px;
+    display: block;
+    margin:0 auto;
+  }
 }
+@media (min-width:1216px){
+  .columns {
+    max-width: 1152px;
+    margin:0 auto;
+  }
+  app-block-detail,app-balances-transfer-detail{
+    max-width: 1152px;
+    display: block;
+    margin:0 auto;
+  }
+}
+@media (min-width:1408px){
+  .columns {
+    max-width: 1344px;
+    margin:0 auto;
+  }
+  app-block-detail,app-balances-transfer-detail {
+    max-width: 1344px;
+    display: block;
+    margin:0 auto;
+  }
+}
+
 app-dashboard .columns {
   max-width: 100%;
 }
