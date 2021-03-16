@@ -52,7 +52,7 @@ nav.navbar {
   font-weight: 600;
 }
 .info-tiles {
-  margin: 1rem 0;
+  margin: 1rem 0.75rem;
 }
 
 .info-tiles .subtitle {
@@ -823,10 +823,10 @@ nav.navbar.networks {
   color: rgb(108, 117, 126);
   opacity: 1; /* Firefox */
 }
-#last-blocks td {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
+// #last-blocks td {
+//   padding-top: 15px;
+//   padding-bottom: 15px;
+// }
 @media (min-width:1024px){
   .columns {
     max-width: 960px;
@@ -861,6 +861,47 @@ nav.navbar.networks {
   }
 }
 
+.tile.is-parent {
+  padding: 0;
+}
+.box {
+  border-radius: 0px;
+}
+.inline {
+  display: flex;
+  padding-left: 20px;
+}
+.vertical_center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.leftmargin15 {
+  margin-left:15px;
+}
+.subtitle {
+  font-size: 1rem;
+}
+.title {
+  text-align: left;
+  font-size: 1rem;
+}
+.content table td, .content table th {
+  vertical-align: middle;
+}
+
+.block_table {
+  padding: 0.75rem;
+  background-color: rgba(119,131,143,.1);
+  border-radius: 6px;
+  text-align:center;
+}
+.transaction_table {
+  padding: 0.75rem;
+  background-color: rgba(119,131,143,.1);
+  border-radius: 50% !important;
+  text-align:center;
+}
 app-dashboard .columns {
   max-width: 100%;
 }
