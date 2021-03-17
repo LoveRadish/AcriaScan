@@ -111,7 +111,7 @@
                       </article>
                   </div>
                 </div>
-                  <div class="tile is-parent is-2-mobile"  style="width:30%;">
+                  <!-- <div class="tile is-parent is-2-mobile"  style="width:30%;">
                       <article class="tile is-child box vertical_center" style="border-top-right-radius:10px;border-bottom-right-radius:10px;">
                         <a routerLink="{{ networkURLPrefix }}/runtime" style="margin:0 auto;">
                           <div class="inline">
@@ -127,6 +127,19 @@
                           </div>
                         </a>
                       </article>
+                  </div> -->
+                  <div class="tile is-parent is-2-mobile"  style="width:30%;" *ngIf="totalTransactionsDaychart$ | async as chart">
+                    <article class="tile is-child box" style="padding: 0px;border-top-right-radius:10px;border-bottom-right-radius:10px;">
+                      <app-loading-box *ngIf="chart.is_loading"></app-loading-box>
+                      <app-chart *ngIf="!chart.is_loading"
+                            [chartData]="chart"
+                            [title]="'Analytics-Charts.Total transactions by day' | translate"
+                            height="200px"
+                            [themeColor] = 'networkColor'
+                            xAxisType="datetime"
+                      >
+                      </app-chart>
+                    </article>
                   </div>
               </div>
           </section>
