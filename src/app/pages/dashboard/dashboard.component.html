@@ -20,6 +20,115 @@
             </div>
             <p style="font-size:1rem;color:#8F99A3;">AcriaScan offers <b style="color:#3498db;">real-time</b> multi-chain data. It makes <b style="color:#3498db;">blockchain</b> data accessible and understandable.</p>
           </section>
+          <section class="info-tiles" id="search_section">
+            <div class="tile is-ancestor has-text-centered" id="analytics_dashboard">
+              <div class="column is-4">
+                <div>
+                  <div class="tile is-parent is-2-mobile">
+                    <article class="tile is-child box" style="border-top-left-radius:10px;">
+                      <a routerLink="{{ networkURLPrefix }}/block/">
+                        <div class="inline">
+                          <div class="vertical_center">
+                            <span class="icon">
+                              <i class="fi fi-rr-copy-alt"></i>
+                            </span>
+                          </div>
+                          <div class="leftmargin15">
+                            <p class="subtitle">{{ 'DashBoard.Finalized Block' | translate }}</p>
+                            <p class="title" *ngIf="networkstats$ | async as networkstats">{{ networkstats.attributes.best_block| number: '1.'}}</p>
+                          </div>
+                        </div>
+                      </a>
+                    </article>
+                  </div>
+                  <div class="tile is-parent is-2-mobile">
+                      <article class="tile is-child box" style="border-bottom-left-radius:10px;">
+                        <a routerLink="{{ networkURLPrefix }}/extrinsic">
+                          <div class="inline">
+                            <div class="vertical_center">
+                              <span class="icon">
+                                <i class="fi fi-rr-edit-alt"></i>
+                              </span>
+                            </div>
+                            <div class="leftmargin15">
+                              <p class="subtitle">{{ 'DashBoard.Transactions' | translate }}</p>
+                              <p *ngIf="networkstats$ | async as networkstats" class="title">{{ networkstats.attributes.total_signed_extrinsics | number: '1.'}}</p>
+                            </div>
+                          </div>
+                        </a>
+                      </article>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-4">
+                <div class="tile is-parent is-2-mobile">
+                    <article class="tile is-child box">
+                      <a routerLink="{{ networkURLPrefix }}/event">
+                        <div class="inline">
+                          <div class="vertical_center">
+                            <span class="icon">
+                              <i class="fi fi-rr-calendar"></i>
+                            </span>
+                          </div>
+                          <div class="leftmargin15">
+                            <p class="subtitle">{{ 'DashBoard.Module Events' | translate }}</p>
+                            <p class="title" *ngIf="networkstats$ | async as networkstats">{{ networkstats.attributes.total_events_module | number: '1.'}}</p>
+                          </div>
+                        </div>
+                      </a>
+                    </article>
+                </div>
+                <div class="tile is-parent is-2-mobile">
+                    <article class="tile is-child box">
+                      <a routerLink="{{ networkURLPrefix }}/account">
+                        <div class="inline">
+                          <div class="vertical_center">
+                            <span class="icon">
+                              <i class="fi fi-rr-id-badge"></i>
+                            </span>
+                          </div>
+                          <div class="leftmargin15">
+                            <p class="subtitle">{{ 'DashBoard.Active Accounts' | translate }}</p>
+                            <p *ngIf="networkstats$ | async as networkstats" class="title">{{ networkstats.attributes.total_accounts }}</p>
+                          </div>
+                        </div>
+                      </a>
+                    </article>
+                </div>
+              </div>
+                <!-- <div class="tile is-parent is-2-mobile"  style="width:30%;">
+                    <article class="tile is-child box vertical_center" style="border-top-right-radius:10px;border-bottom-right-radius:10px;">
+                      <a routerLink="{{ networkURLPrefix }}/runtime" style="margin:0 auto;">
+                        <div class="inline">
+                          <div class="vertical_center">
+                            <span class="icon">
+                              <i class="fi fi-rr-settings"></i>
+                            </span>
+                          </div>
+                          <div class="leftmargin15">
+                            <p class="subtitle">{{ 'DashBoard.Runtime Versions' | translate }}</p>
+                            <p *ngIf="networkstats$ | async as networkstats" class="title">{{ networkstats.attributes.total_runtimes }}</p>
+                          </div>
+                        </div>
+                      </a>
+                    </article>
+                </div> -->
+                <div class="tile is-parent column is-4" *ngIf="totalTransactionsDaychart$ | async as chart">
+                  <article class="tile is-child box" style="padding: 0px;border-top-right-radius:10px;border-bottom-right-radius:10px;">
+                    <app-loading-box *ngIf="chart.is_loading"></app-loading-box>
+                    <app-chart *ngIf="!chart.is_loading"
+                          [chartData]="chart"
+                          [title]="'Analytics-Charts.Total transactions by day' | translate"
+                          height="200px"
+                          [themeColor] = 'networkColor'
+                          xAxisType="datetime"
+                    >
+                    </app-chart>
+                  </article>
+                </div>
+            </div>
+          </section>
+          
         </div>
       </nav>
 
@@ -35,115 +144,7 @@
         </article>
 
 
-        <div class="container" style="z-index:3; margin-top:17rem;">
-            <section class="info-tiles is-hidden-mobile">
-              <div class="tile is-ancestor has-text-centered">
-                <div style="width:35%;">
-                  <div>
-                    <div class="tile is-parent is-2-mobile">
-                      <article class="tile is-child box" style="border-top-left-radius:10px;">
-                        <a routerLink="{{ networkURLPrefix }}/block/">
-                          <div class="inline">
-                            <div class="vertical_center">
-                              <span class="icon">
-                                <i class="fi fi-rr-copy-alt"></i>
-                              </span>
-                            </div>
-                            <div class="leftmargin15">
-                              <p class="subtitle">{{ 'DashBoard.Finalized Block' | translate }}</p>
-                              <p class="title" *ngIf="networkstats$ | async as networkstats">{{ networkstats.attributes.best_block| number: '1.'}}</p>
-                            </div>
-                          </div>
-                        </a>
-                      </article>
-                    </div>
-                    <div class="tile is-parent is-2-mobile">
-                        <article class="tile is-child box" style="border-bottom-left-radius:10px;">
-                          <a routerLink="{{ networkURLPrefix }}/extrinsic">
-                            <div class="inline">
-                              <div class="vertical_center">
-                                <span class="icon">
-                                  <i class="fi fi-rr-edit-alt"></i>
-                                </span>
-                              </div>
-                              <div class="leftmargin15">
-                                <p class="subtitle">{{ 'DashBoard.Transactions' | translate }}</p>
-                                <p *ngIf="networkstats$ | async as networkstats" class="title">{{ networkstats.attributes.total_signed_extrinsics | number: '1.'}}</p>
-                              </div>
-                            </div>
-                          </a>
-                        </article>
-                    </div>
-                  </div>
-                </div>
-                <div style="width:35%;">
-                  <div class="tile is-parent is-2-mobile">
-                      <article class="tile is-child box">
-                        <a routerLink="{{ networkURLPrefix }}/event">
-                          <div class="inline">
-                            <div class="vertical_center">
-                              <span class="icon">
-                                <i class="fi fi-rr-calendar"></i>
-                              </span>
-                            </div>
-                            <div class="leftmargin15">
-                              <p class="subtitle">{{ 'DashBoard.Module Events' | translate }}</p>
-                              <p class="title" *ngIf="networkstats$ | async as networkstats">{{ networkstats.attributes.total_events_module | number: '1.'}}</p>
-                            </div>
-                          </div>
-                        </a>
-                      </article>
-                  </div>
-                  <div class="tile is-parent is-2-mobile">
-                      <article class="tile is-child box">
-                        <a routerLink="{{ networkURLPrefix }}/account">
-                          <div class="inline">
-                            <div class="vertical_center">
-                              <span class="icon">
-                                <i class="fi fi-rr-id-badge"></i>
-                              </span>
-                            </div>
-                            <div class="leftmargin15">
-                              <p class="subtitle">{{ 'DashBoard.Active Accounts' | translate }}</p>
-                              <p *ngIf="networkstats$ | async as networkstats" class="title">{{ networkstats.attributes.total_accounts }}</p>
-                            </div>
-                          </div>
-                        </a>
-                      </article>
-                  </div>
-                </div>
-                  <!-- <div class="tile is-parent is-2-mobile"  style="width:30%;">
-                      <article class="tile is-child box vertical_center" style="border-top-right-radius:10px;border-bottom-right-radius:10px;">
-                        <a routerLink="{{ networkURLPrefix }}/runtime" style="margin:0 auto;">
-                          <div class="inline">
-                            <div class="vertical_center">
-                              <span class="icon">
-                                <i class="fi fi-rr-settings"></i>
-                              </span>
-                            </div>
-                            <div class="leftmargin15">
-                              <p class="subtitle">{{ 'DashBoard.Runtime Versions' | translate }}</p>
-                              <p *ngIf="networkstats$ | async as networkstats" class="title">{{ networkstats.attributes.total_runtimes }}</p>
-                            </div>
-                          </div>
-                        </a>
-                      </article>
-                  </div> -->
-                  <div class="tile is-parent is-2-mobile"  style="width:30%;" *ngIf="totalTransactionsDaychart$ | async as chart">
-                    <article class="tile is-child box" style="padding: 0px;border-top-right-radius:10px;border-bottom-right-radius:10px;">
-                      <app-loading-box *ngIf="chart.is_loading"></app-loading-box>
-                      <app-chart *ngIf="!chart.is_loading"
-                            [chartData]="chart"
-                            [title]="'Analytics-Charts.Total transactions by day' | translate"
-                            height="200px"
-                            [themeColor] = 'networkColor'
-                            xAxisType="datetime"
-                      >
-                      </app-chart>
-                    </article>
-                  </div>
-              </div>
-          </section>
+        <div class="container" id="dashboard_main_section">
 
           <section class="columns">
               <div class="column is-6 last-blocks" id="last-blocks">

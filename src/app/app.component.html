@@ -16,12 +16,12 @@
     'network-datahighway': currentNetwork?.attributes.network_id == 'datahighway' || currentNetwork?.attributes.network_id == 'datahighway-testnet',
     'network-encointer': currentNetwork?.attributes.network_id == 'encointer' || currentNetwork?.attributes.network_id == 'encointer-gesell',
     'network-joystream': currentNetwork?.attributes.network_id == 'joystream' || currentNetwork?.attributes.network_id == 'joystream-testnet'
-  }">
+  }" class="contents" style="min-height:600px;">
 
   <nav class="navbar networks is-black">
       <div class="container">
           <div class="navbar-brand">
-              <a class="self_navbar brand-text" routerLink="/" (click)="resetNetwork()">
+              <a class="self_navbar brand-text" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}">
                 <img src="assets/logo.png" width="120">
               </a>
               <div class="is-hidden-desktop network-name">

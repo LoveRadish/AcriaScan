@@ -816,11 +816,19 @@ nav.navbar.networks {
   background-color: #21325b !important;
   background-image: url(/assets/abstract-shapes-20.svg?v=1)!important;
   z-index: 1;
-  position:absolute;
+  position:relative;
 }
 #search {
   padding-top: 4.25rem !important;
-  width: 50%;
+  width:100%;
+}
+#search_section {
+  width: 98%;
+  position:absolute;
+  margin-top:16rem;
+}
+#search .card {
+  width: 55%;
 }
 #search input {
   padding:1.5rem;
@@ -839,10 +847,28 @@ nav.navbar.networks {
   color: rgb(108, 117, 126);
   opacity: 1; /* Firefox */
 }
+#analytics_dashboard .column {
+  padding: 0px;
+}
 // #last-blocks td {
 //   padding-top: 15px;
 //   padding-bottom: 15px;
 // }
+#dashboard_main_section {
+  z-index:3;
+  margin-top:10rem;
+}
+
+@media screen and (max-width: 770px) {
+  #dashboard_main_section {
+    margin-top:40rem;
+  }
+}
+@media (max-width:500x){
+  #dashboard_main_section {
+    display: none;
+  }
+}
 @media (min-width:1024px){
   .columns {
     max-width: 960px;

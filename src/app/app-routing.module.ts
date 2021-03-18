@@ -82,7 +82,7 @@ import {DemocracyPreimageDetailComponent} from './pages/democracy-preimage-detai
 import {ExtrinsicParamDownloadComponent} from './pages/extrinsic-param-download/extrinsic-param-download.component';
 
 const routes: Routes = [
-  { path: '', component: NetworkOverviewComponent, },
+  { path: '', redirectTo: '/polkadot', pathMatch: 'full'},
   { path: 'legal/privacy-policy', component: PrivacyPolicyComponent, },
   { path: 'legal/terms-of-use', component: TermsOfUseComponent, },
   // Redirect old URLs
