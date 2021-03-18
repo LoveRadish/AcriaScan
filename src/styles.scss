@@ -1108,7 +1108,29 @@ app-dashboard app-chart > div {
   .right_sub a{
     margin-left: 1px;
   }
+  #search .card {
+    width: 100%;
+  }
 }
+
+#navMenu-networks {
+  position: relative;
+}
+#navbar_drop_button {
+  width: auto;
+}
+@media screen and (max-width: 1000px) {
+  #navMenu-networks {
+    position: absolute;
+    right:0px;
+    top: 4rem;
+    width:100%;
+  }
+  #navbar_drop_button {
+    width: 100%;
+  }
+}
+
 #footer-network, #footer-chain, #footer-runtime {
   padding-right:20px;
   padding-left: 40px;
