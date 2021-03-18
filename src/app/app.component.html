@@ -24,11 +24,11 @@
               <a class="self_navbar brand-text" routerLink="/{{ currentNetwork?.attributes.network_id || 'Network'  }}">
                 <img src="assets/logo.png" width="120">
               </a>
-              <div class="is-hidden-desktop network-name">
+              <!-- <div class="is-hidden-desktop network-name">
                 <i *ngIf="currentNetwork?.attributes.chain_type == 'para'" class="fa fa-project-diagram network-icon current-network"  [style.color]="'#' + currentNetwork?.attributes.color_code" title="Parachain"></i>
                 <i *ngIf="currentNetwork?.attributes.chain_type == 'relay'" class="fa fa-globe network-icon current-network" [style.color]="'#3498db'" title="Relay chain"></i>
                 {{ currentNetwork?.attributes.name || 'Network'  }}
-              </div>
+              </div> -->
               <div class="navbar-burger burger" data-target="navMenu-networks" [ngClass]="{'is-active': showNavigation}" (click)="toggleNavigation()">
                   <span class="icon">
                     <i class="fa fa-angle-down" aria-hidden="true"></i>

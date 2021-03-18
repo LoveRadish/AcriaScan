@@ -113,7 +113,7 @@
                       </a>
                     </article>
                 </div> -->
-                <div class="tile is-parent column is-4" *ngIf="totalTransactionsDaychart$ | async as chart">
+                <div class="tile is-parent column is-4 chart_responsive" *ngIf="totalTransactionsDaychart$ | async as chart">
                   <article class="tile is-child box" style="padding: 0px;border-top-right-radius:10px;border-bottom-right-radius:10px;">
                     <app-loading-box *ngIf="chart.is_loading"></app-loading-box>
                     <app-chart *ngIf="!chart.is_loading"
@@ -128,7 +128,6 @@
                 </div>
             </div>
           </section>
-          
         </div>
       </nav>
 
@@ -228,20 +227,17 @@
                                   </thead>
                                   <tbody *ngIf="balanceTransfers">
                                       <tr *ngFor="let balanceTransfer of balanceTransfers.data; trackBy: balanceTransfers.trackBy">
-                                          <td width="10%">
+                                          <td style="width:10%;">
                                             <div class="transaction_table">
                                               <span>Tx</span>
                                             </div>
                                           </td>
-                                          <td>
+                                          <td style="width:30%;">
                                             <a>{{ formatBalance(balanceTransfer.attributes.value) | number:'1.0-15' }} {{ networkTokenSymbol }}</a><br>
                                             <span>Amount</span>
                                           </td>
                                           <td>
-                                            <div style="text-overflow: ellipsis;
-                                            overflow: hidden;
-                                            white-space: nowrap;
-                                            width: 200px;">
+                                            <div id="fromtoTransaction">
                                               <span>From</span>&nbsp;<a>{{balanceTransfer.attributes.sender.attributes.identity_display || balanceTransfer.attributes.sender.attributes.index_address || balanceTransfer.attributes.sender.attributes.address}}</a><br>
                                               <span>To</span>&nbsp;<a>{{balanceTransfer.attributes.destination.attributes.identity_display || balanceTransfer.attributes.destination.attributes.index_address || balanceTransfer.attributes.destination.attributes.address}}</a>
                                             </div>
@@ -260,7 +256,7 @@
           </section>
           <section class="info-tiles">
             <div class="tile is-ancestor has-text-centered">
-                <div class="tile is-parent" *ngIf="totalTransactionsDaychart$ | async as chart">
+                <div class="tile is-parent column is-4 chart_responsive" *ngIf="totalTransactionsDaychart$ | async as chart">
                     <article class="tile is-child box">
                       <app-loading-box *ngIf="chart.is_loading"></app-loading-box>
                       <app-chart *ngIf="!chart.is_loading"
@@ -273,7 +269,7 @@
                       </app-chart>
                     </article>
                 </div>
-                <div class="tile is-parent is-hidden-mobile" *ngIf="averageBlocktimeDaychart$ | async as chart">
+                <div class="tile is-parent column is-4 chart_responsive" *ngIf="averageBlocktimeDaychart$ | async as chart">
                     <article class="tile is-child box">
                       <app-loading-box *ngIf="chart.is_loading"></app-loading-box>
                       <app-chart *ngIf="!chart.is_loading"
@@ -287,7 +283,7 @@
                       </app-chart>
                     </article>
                 </div>
-                <div class="tile is-parent is-hidden-touch is-hidden-desktop-only" *ngIf="cumulativeAccountsDayChart$ | async as chart">
+                <div class="tile is-parent column is-4 chart_responsive" *ngIf="cumulativeAccountsDayChart$ | async as chart">
                     <article class="tile is-child box">
                       <app-loading-box *ngIf="chart.is_loading"></app-loading-box>
                       <app-chart *ngIf="!chart.is_loading"
