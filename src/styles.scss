@@ -1216,6 +1216,9 @@ app-dashboard app-chart > div {
 .navbar-burger .makeblack {
   color: black!important;
 }
+.card .card-header {
+  overflow-x:scroll;
+}
 // FIXME Temporary Edge menu fix
 @import '~node_modules/bulma/sass/utilities/mixins';
 
