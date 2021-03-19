@@ -968,7 +968,7 @@ app-dashboard .columns {
   max-width: 100%;
 }
 #last-blocks .card-table {
-  overflow-x: hidden;
+  overflow-x: scroll;
   overflow-y: hidden;
 }
 #last-blocks .card-table:hover {
@@ -983,7 +983,7 @@ app-dashboard .columns {
 }
 
 #last-transfers .card-table {
-  overflow-x: hidden;
+  overflow-x: scroll;
   overflow-y: hidden;
 }
 #last-transfers .card-table:hover {
@@ -1009,6 +1009,7 @@ app-dashboard app-chart > div {
 }
 .card-table::-webkit-scrollbar {
   width: 5px!important;
+  height: 5px!important;
 }
 
 /* Track */
@@ -1162,6 +1163,47 @@ app-dashboard app-chart > div {
     vertical-align: bottom;
   }
 }
+.mainbodyclass {
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  #search_section {
+    width: 97%;
+    margin-top: 17rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  #search_section {
+    width: 96%;
+    margin-top: 17rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  #search_section {
+    width: 94%;
+    margin-top: 17rem;
+  }
+}
+@media screen and (max-width: 300px) {
+  #search_section {
+    width: 93%;
+    margin-top: 17rem;
+  }
+  .footer {
+    width: 107%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .sub_footer {
+    display: block;
+  }
+  .right_sub {
+    margin-top: 20px;
+    text-align: left;
+  } 
+}
 
 .message .message-body {
   font-size: 14px;
@@ -1171,6 +1213,9 @@ app-dashboard app-chart > div {
   }
 }
 
+.navbar-burger .makeblack {
+  color: black!important;
+}
 // FIXME Temporary Edge menu fix
 @import '~node_modules/bulma/sass/utilities/mixins';
 
